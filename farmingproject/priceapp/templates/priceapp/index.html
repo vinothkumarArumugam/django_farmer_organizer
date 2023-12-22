@@ -1,0 +1,26 @@
+<!-- templates/priceapp/index.html -->
+{% extends 'priceapp/base.html' %}
+{% load static %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+  <h1>Price Information</h1>
+  
+  <h2>Flower Price</h2>
+  <img src="{% static 'images/chrysanthemum.jpg' %}" alt="Flower Image" width="100">
+  <p>Current Flower Price: Rupees{{ flower_price }} per kilogram</p>
+
+  <h2>Sugarcane Price</h2>
+  <img src="{% static 'images/sugarcane.jpg' %}" alt="Sugarcane Image" width="100">
+  <p>Current Sugarcane Price: Rupees{{ sugarcane_price }} per ton</p>
+
+  <h2>Turmeric Price</h2>
+  <img src="{% static 'images/turmeric.jpg' %}" alt="Turmeric Image" width="100">
+  <p>Current Turmeric Price: Rupees{{ turmeric_price }} per ton</p>
+
+  <nav>
+    
+    <a href="{% url 'logout' %}">Logout</a>
+  </nav>
+{% endblock %}

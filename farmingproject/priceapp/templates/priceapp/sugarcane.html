@@ -1,0 +1,14 @@
+<!-- templates/priceapp/sugarcane_form.html -->
+{% extends 'priceapp/base.html' %}
+
+
+{% block title %}Sugarcane Form{% endblock %}
+
+{% block content %}
+  <h1>Sugarcane Form</h1>
+  <form method="post" action="{% url 'sugarcane_form' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

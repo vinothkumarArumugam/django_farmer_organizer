@@ -1,0 +1,13 @@
+<!-- templates/priceapp/flower_form.html -->
+{% extends 'priceapp/base.html' %}
+
+{% block title %}Flower Form{% endblock %}
+
+{% block content %}
+  <h1>Flower Form</h1>
+  <form method="post" action="{% url 'flower_form' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

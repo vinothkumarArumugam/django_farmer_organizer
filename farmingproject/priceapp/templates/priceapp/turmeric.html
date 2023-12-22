@@ -1,0 +1,13 @@
+<!-- templates/priceapp/turmeric_form.html -->
+{% extends 'priceapp/base.html' %}
+
+{% block title %}Turmeric Form{% endblock %}
+
+{% block content %}
+  <h1>Turmeric Form</h1>
+  <form method="post" action="{% url 'turmeric_form' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
